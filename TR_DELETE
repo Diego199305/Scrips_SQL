@@ -1,0 +1,15 @@
+-- Trigger insere na tabela AuditCategoria informações de deleção logo após um delete.
+
+CREATE TRIGGER TR_DELETE
+ON [Producao].[Categoria]
+AFTER DELETE 
+AS
+BEGIN
+DECLARE @id SMALLINT, @nc VARCHAR(30), @des VARCHAR(30)
+SELECT @id = iIDCategoria, @nc = NomeCategoria, @des = Descricao FROM deleted
+
+INSERT INTO [dbo].[AuditCategoria]
+VALUES
+(@id, ' ', ' ', @nc, @des, SYSTEM_USER, GETDATE(), 'DEL')
+END
+GO
