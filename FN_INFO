@@ -1,0 +1,10 @@
+CREATE FUNCTION [dbo].[Fn_teste_4](@idmin SMALLINT, @idmax SMALLINT)
+RETURNS TABLE
+AS
+RETURN(SELECT A.iIDCliente, A.Contato, A.Telefone, B.DataEnvio, C.PrecoUnitario, C.Quantidade, D.NomeProduto
+FROM Vendas.Cliente A
+JOIN Vendas.Pedido B ON a.iIDCliente = b.iIDCliente
+JOIN Vendas.ItensPedido c ON B.iIDPedido = C.iIDPedido
+JOIN Producao.Produto d ON C.iIDProduto = D.iIDProduto
+WHERE A.iIDCliente BETWEEN @idmin AND @idmax)
+GO
