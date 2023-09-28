@@ -1,3 +1,5 @@
+-- Trigger insere na tabela AuditCategoria informações de insert logo após um insert.
+
 CREATE TRIGGER [Producao].[Tr_teste_3]
 ON [Producao].[Categoria]
 AFTER INSERT 
