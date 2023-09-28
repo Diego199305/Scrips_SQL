@@ -1,4 +1,4 @@
--- Trigger insere na tabela AuditCategoria informações de atualização logo após um update.
+-- Trigger insere na tabela AuditCategoria informações de atualização (Id da categoria, nome da categoria, descriçao, usuário que realizou a operação, date da operação e o tipo da operação) logo após um update.
 
 CREATE TRIGGER TR_UPDATE
 ON [Producao].[Categoria]
