@@ -1,7 +1,8 @@
 -- A Procedure realiza uma consulta em uma determindada tabela.
--- Poder· indicar quantas linhas deseja retornar atravÈs do par‚metro @top.
--- Poder· indicar qual tebela realizar a consulta atravÈs do par‚metro @tab.
--- Poder· indicar a coluna que deseja fazer o ordenamento atravÈs do par‚metro @ord.
+-- Poder√° indicar quantas linhas deseja retornar atrav√©s do par√¢metro @top.
+-- Poder√° indicar qual tebela realizar a consulta atrav√©s do par√¢metro @tab.
+-- Poder√° indicar a coluna que deseja fazer o ordenamento atrav√©s do par√¢metro @ord.
+-- Usa a fun√ß√£o QUOTENAME() para evitar SQL Injection.
 
 CREATE PROC SQL_Dynamic(@top SMALLINT, @tab NVARCHAR(20),
 @ord NVARCHAR(20))
