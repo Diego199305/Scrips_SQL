@@ -1,4 +1,4 @@
--- Retorna o Id do Cliente, Contato, Telefone, data de envio, preco unitário, quantidade do produto e o nome do produto
+-- Retorna o id do Cliente, Contato, Telefone, data de envio, preco unitário, quantidade do produto e o nome do produto
 -- das tabelas Vendas.Pedido, Vendas.ItensPedido e Producao.Produto.
 
 CREATE FUNCTION [dbo].[Fn_teste_4](@idmin SMALLINT, @idmax SMALLINT)
