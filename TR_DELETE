@@ -1,4 +1,5 @@
--- Trigger insere na tabela AuditCategoria informações de deleção logo após um delete.
+-- Trigger insere na tabela AuditCategoria informações de deleção (Id da categoria, nome da categoria, descriçao, usuário que realizou a operação, date da operação e o tipo da operação) logo após um delete.
+
 
 CREATE TRIGGER TR_DELETE
 ON [Producao].[Categoria]
