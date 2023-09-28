@@ -1,4 +1,4 @@
--- Trigger insere na tabela AuditCategoria informações de insert logo após um insert.
+-- Trigger insere na tabela AuditCategoria informações de insert (Id da categoria, nome da categoria, descriçao, usuário que realizou a operação, date da operação e o tipo da operação) logo após um insert.
 
 CREATE TRIGGER [Producao].[Tr_teste_3]
 ON [Producao].[Categoria]
