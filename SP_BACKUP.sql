@@ -1,8 +1,8 @@
 -- A Procedure realiza os backups Full (@op = 'F'), Differential (@op = 'D'), e do Log (@op = 'L') de um banco de dados.
--- Com o par‚metro @op ser· indicado o tipo de backup que deseja realizar.
--- Se o par‚metro indicado for incorreto, a operaÁ„o ser· inv·lida.
+-- Com o par√¢metro @op ser√° indicado o tipo de backup que deseja realizar.
+-- Se o par√¢metro indicado for incorreto, a opera√ß√£o ser√° inv√°lida.
 
-ALTER PROC SP_BACKUP (@op CHAR(1), @db NVARCHAR(20))
+CREATE PROC SP_BACKUP (@op CHAR(1), @db NVARCHAR(20))
 AS
 BEGIN
 DECLARE @DATA VARCHAR(25), @ext CHAR(4), @cam NVARCHAR(50)
@@ -29,7 +29,7 @@ ELSE IF @op = 'L'
 	END
 ELSE 
 	BEGIN
-	PRINT 'OperaÁ„o inv·lida!'
+	PRINT 'Opera√ß√£o inv√°lida!'
 	END
 END
 GO
